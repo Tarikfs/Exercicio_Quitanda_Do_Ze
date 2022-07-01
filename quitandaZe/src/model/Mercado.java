@@ -1,15 +1,14 @@
-package service;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Produto;
+public class Mercado {
 
-public class ArmazenaProduto {
+    List<Produto> produtos = new ArrayList<>();
+    List<Usuario> usuarios = new ArrayList<Usuario>();
 
-    public void armazenaProduto(Produto produto) throws Exception {
-
-        List<Produto> produtos = new ArrayList<>();
+    public void listaProdutos() {
         Produto produtos1 = new Produto(1, "Castanhas", "Granel", 87.00, true);
         Produto produtos2 = new Produto(2, "Pão", "Unidade", 7.50, false);
         Produto produtos3 = new Produto(3, "Queijo", "Unidade", 20.00, true);
@@ -27,7 +26,34 @@ public class ArmazenaProduto {
         produtos.add(produtos6);
         produtos.add(produtos7);
         produtos.add(produtos8);
+    }
 
+    public void listaUsuario() {
+        Usuario usuario1 = new Funcionario(1, "João", 2000.00, 0.07);
+        Usuario usuario2 = new Estagiario(2, "André", 1000.00, 0.03);
+        Usuario usuario3 = new Estagiario(3, "Ana", 1000.00, 0.03);
+        Usuario usuario4 = new Funcionario(4, "Lucia", 2000.00, 0.07);
+
+        usuarios.add(usuario1);
+        usuarios.add(usuario2);
+        usuarios.add(usuario3);
+        usuarios.add(usuario4);
+
+    }
+
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setFuncionarioEscolhido(Usuario usuario) {
+    }
+
+    public String getFuncionarioEscolhido() {
+        return null;
     }
 
 }

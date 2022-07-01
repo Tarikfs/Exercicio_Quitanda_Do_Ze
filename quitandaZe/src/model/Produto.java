@@ -56,4 +56,10 @@ public class Produto {
         this.comissionavel = comissionavel;
     }
 
+    @Override
+    public String toString() {
+        return "[id=" + id + ", nomeProduto=" + nomeProduto + ", preco="
+                + preco + ", tipo=" + tipo + "]";
+    }
+
 }
