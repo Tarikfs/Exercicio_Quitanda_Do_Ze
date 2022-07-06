@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import model.Mercado;
@@ -15,6 +17,7 @@ public class MenuQuitandaZe {
         int valor = 1;
         Scanner sc = new Scanner(System.in);
         int funcionarioEscolhido = 0;
+        List<Produto> produtosSelecionados = new ArrayList<Produto>();
         Mercado m = new Mercado();
         m.listaProdutos();
         m.listaUsuario();
@@ -65,12 +68,32 @@ public class MenuQuitandaZe {
                     int produtoEscolhido = sc.nextInt();
                     for (Produto produto : m.getProdutos()) {
                         if (produto.getId() == produtoEscolhido) {
+                            produtosSelecionados.add(produto);
+                            System.out.println("Lista de produtos selecionados: " + produtosSelecionados);
                             System.out.println("produto selecionado: " + produto);
                         }
                     }
                 }
 
             }
+            if (valor == 5) {
+                System.out.println("Lista de produtos selecionados: " + produtosSelecionados);
+            }
+
+            if (valor == 6) {
+                System.out.println("Lista de produtos selecionados: " + produtosSelecionados);
+                System.out.println("digite o ID do produto que deseja remover");
+                int produtoRemovido = sc.nextInt();
+                for (Produto produto : produtosSelecionados) {
+                    if (produto.getId() == produtoRemovido) {
+                        System.out.println("removendo produto: " + produto);
+                        produtosSelecionados.remove(produto);
+                        System.out.println("\n Lista atualizada de produtos selecionados: " + produtosSelecionados);
+                        break;
+                    }
+                }
+            }
+            // falta finalizar compra
 
         } while (valor != 0);
     }
