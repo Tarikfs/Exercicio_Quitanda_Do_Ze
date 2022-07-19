@@ -2,19 +2,19 @@ package model;
 
 public class Estagiario extends Usuario {
 
-    private double commissaoEsatagiario;
+    private double comissaoEstagiario;
 
-    public double getCommissaoEsatagiario() {
-        return commissaoEsatagiario;
+    public double getComissaoEstagiario() {
+        return comissaoEstagiario;
     }
 
-    public void setCommissaoEsatagiario(double commissaoEsatagiario) {
-        this.commissaoEsatagiario = commissaoEsatagiario;
+    public void setComissaoEstagiario(double comissaoEstagiario) {
+        this.comissaoEstagiario = comissaoEstagiario;
     }
 
-    public Estagiario(int id, String nome, double salario, double commissaoEsatagiario) {
+    public Estagiario(int id, String nome, double salario, double comissaoEstagiario) {
         super(id, nome, salario);
-        this.commissaoEsatagiario = commissaoEsatagiario;
+        this.comissaoEstagiario = comissaoEstagiario;
     }
 
 }

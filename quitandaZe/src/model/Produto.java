@@ -58,8 +58,12 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "[id=" + id + ", nomeProduto=" + nomeProduto + ", preco="
-                + preco + ", tipo=" + tipo + "]";
+        return "id=" + id + ", nomeProduto=" + nomeProduto + ", preco="
+                + preco + ", tipo=" + tipo;
     }
 
+    public String formatoString() {
+        return  "\nProduto= " + nomeProduto + "\nPreço= "
+                + preco + "\nTipo= " + tipo;
+    }
 }
